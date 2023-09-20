@@ -1,0 +1,9 @@
+result_folder: Dual_watermark_256_128_0.1_0.0002_0.5_se_se_1_10_10_10_0.1_2023_04_18_16_29_54/
+model_epoch: 90
+batch_size: 1
+with_mask: true
+strength_factor: 1
+noise_layer: Identity()
+
+# Identity()/JpegTest()/Resize()/GaussianBlur()/MedianBlur()/Brightness()/Contrast()/Saturation()/Hue()/FaceCrop()/FaceCropout()/Dropout()/SaltPepper()/GaussianNoise()
+# FaceErase()/FaceEraseout()/SimSwap()/FaceSwap()/GANimation()/StarGAN()

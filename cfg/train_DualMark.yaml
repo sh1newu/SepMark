@@ -1,0 +1,45 @@
+project_name: Dual_watermark
+epoch_number: 100
+batch_size: 16
+lr: 0.0002
+beta1: 0.5
+image_size: 256
+message_length: 128
+message_range: 0.1
+attention_encoder: se
+attention_decoder: se
+weight:
+  - 1 # encoder
+  - 10 # decoder_C
+  - 10 # decoder_R
+  - 10 # decoder_F
+  - 0.1 # discriminator
+dataset_path: /home/likaide/sda4/wxs/Dataset/dual_watermark/
+save_images_number: 8
+noise_layers:
+  pool_R:
+    - Identity()
+    - JpegTest()
+    - Resize()
+    - GaussianBlur()
+    - MedianBlur()
+    - Brightness()
+    - Contrast()
+    - Saturation()
+    - Hue()
+    #- FaceCrop()
+    #- FaceCropout()
+    - Dropout()
+    - SaltPepper()
+    - GaussianNoise()
+  pool_F:
+    #- FaceErase()
+    #- FaceEraseout()
+    - SimSwap()
+    - GANimation()
+    - StarGAN()
+    #- MobileFaceSwap()
+    #- ROOP()
+
+# Identity()/JpegTest()/Resize()/GaussianBlur()/MedianBlur()/Brightness()/Contrast()/Saturation()/Hue()/FaceCrop()/FaceCropout()/Dropout()/SaltPepper()/GaussianNoise()
+# FaceErase()/FaceEraseout()/SimSwap()/FaceSwap()/GANimation()/StarGAN()
