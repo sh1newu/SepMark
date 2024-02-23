@@ -2,6 +2,9 @@
 The implementation of the paper "SepMark: Deep Separable Watermarking for Unified Source Tracing and Deepfake Detection".  
 Paper Link: https://doi.org/10.1145/3581783.3612471
 
+**Quick Test (23/2/2024)**
+Due to the inconvenience of deploying Deepfake models, you may want to quickly test the robustness under common or custom distortions. In such cases, it is suggested that you comment out the lines regarding deepfake distortions in the file network/noise_layers/__init__.py. Meanwhile, in the file test_Dual_Mark.py, you should modify noise_layers_F = args.noise_layers.pool_F to noise_layers_F = []. There might be some negligible performance changes brought by these modifications compared to our resultant tensorboard files in the runs\Tables_2_3_and_6\ folder.
+
 Update (11/3/2023)
 We have put all the [noise layers](https://drive.google.com/drive/folders/17B02FgS8hYtW3V1GVZkiy0wrq--FeYVf?usp=sharing) and [datasets](https://drive.google.com/drive/folders/1LqvsnoiyyYyrYSmnTRz-y6LP5UheYCXH?usp=sharing) into Google Drive due to the file sizes; see the README file please. Hopefully, all goes well, but we never guarantee that you'll be able to run it directly without any Debug. How to replicate/use the code? For me, when everything above is ready, it is enough to modify the configuration file in the cfg folder and run the test/main file successfully. So, Debug is all you need! If there are any missing uploads, please feel free to contact me.
 
