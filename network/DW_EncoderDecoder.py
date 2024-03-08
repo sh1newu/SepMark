@@ -1,7 +1,7 @@
 from . import *
 from .Encoder_U import DW_Encoder
 from .Decoder_U import DW_Decoder
-from .Noise import Noise
+# from .Noise import Noise
 from .Random_Noise import Random_Noise
 
 
